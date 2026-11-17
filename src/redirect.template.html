@@ -12,12 +12,12 @@
 <!-- Google Ads: tag global (gtag.js) + snippet de CONVERSÃO entram aqui, somente nesta página. -->
 
 <style>
-@font-face{font-family:"Bricolage";src:url(/assets/fonts/display.woff2) format("woff2");font-weight:200 800;font-display:swap}
-@font-face{font-family:"Geist";src:url(/assets/fonts/sans.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Manrope";src:url(/assets/fonts/display.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"Inter";src:url(/assets/fonts/sans.woff2) format("woff2");font-weight:100 900;font-display:swap}
 :root{--night:#071830;--gold:#C29E62;--gold-2:#D9BC85;--soft:#A9B3C1;--wa:#1E9E52;--wa-h:#168444;--ease:cubic-bezier(.2,.75,.15,1)}
 *{box-sizing:border-box}
 html,body{height:100%}
-body{margin:0;background:var(--night);color:#E8ECF2;font-family:"Geist",system-ui,sans-serif;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100dvh;overflow-x:hidden;position:relative;isolation:isolate}
+body{margin:0;background:var(--night);color:#E8ECF2;font-family:"Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;display:flex;flex-direction:column;min-height:100dvh;overflow-x:hidden;position:relative;isolation:isolate}
 .orb{position:fixed;border-radius:50%;filter:blur(70px);z-index:-1;opacity:.6;animation:drift 16s ease-in-out infinite alternate}
 .orb.a{width:560px;height:560px;right:-160px;top:-200px;background:radial-gradient(circle,#1C4C86,transparent 65%)}
 .orb.b{width:440px;height:440px;left:-160px;bottom:-160px;background:radial-gradient(circle,rgba(194,158,98,.5),transparent 65%)}
@@ -26,7 +26,7 @@ header{padding:20px 24px}
 .brand{display:inline-flex;align-items:center;gap:12px;padding:10px 16px 10px 12px;border-radius:18px;background:rgba(250,248,244,.92)}
 .brand svg{height:40px;width:auto}
 .brand span{display:flex;flex-direction:column;line-height:1;color:#0A2140}
-.brand b{font-family:"Bricolage",sans-serif;font-weight:600;font-size:17px;letter-spacing:-.02em}
+.brand b{font-family:"Manrope",sans-serif;font-weight:600;font-size:17px;letter-spacing:-.014em}
 .brand small{font-size:9px;font-weight:600;letter-spacing:.34em;color:#8E6D30;margin-top:5px}
 main{flex:1;display:grid;place-items:center;padding:30px 20px 50px}
 .card{width:100%;max-width:560px;padding:40px 34px 32px;border-radius:32px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);backdrop-filter:blur(10px);text-align:center;animation:rise .9s var(--ease) both}
@@ -35,8 +35,8 @@ main{flex:1;display:grid;place-items:center;padding:30px 20px 50px}
 .ring svg{width:118px;height:118px;transform:rotate(-90deg)}
 .ring .t{stroke:rgba(194,158,98,.18)}
 .ring .p{stroke:var(--gold-2);stroke-linecap:round;stroke-dasharray:327;stroke-dashoffset:327;transition:stroke-dashoffset 1s linear}
-.ring span{position:absolute;inset:0;display:grid;place-items:center;font-family:"Bricolage",sans-serif;font-size:44px;font-weight:600;color:#fff}
-h1{margin:0;font-family:"Bricolage",sans-serif;font-weight:600;font-size:clamp(32px,6vw,44px);line-height:1.05;letter-spacing:-.04em;color:#fff}
+.ring span{position:absolute;inset:0;display:grid;place-items:center;font-family:"Manrope",sans-serif;font-size:44px;font-weight:600;color:#fff}
+h1{margin:0;font-family:"Manrope",sans-serif;font-weight:600;font-size:clamp(32px,6vw,44px);line-height:1.05;letter-spacing:-.03em;color:#fff}
 h1 em{font-style:normal;color:var(--gold-2);font-weight:500}
 p{margin:16px auto 0;max-width:42ch;font-size:16.5px;line-height:1.65;color:var(--soft)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;margin-top:28px;min-height:58px;padding:0 26px 0 20px;border-radius:16px;background:var(--wa);color:#fff;font-weight:600;font-size:16px;text-decoration:none;box-shadow:0 14px 30px -14px rgba(30,158,82,.8);transition:background-color .3s,transform .3s var(--ease)}
