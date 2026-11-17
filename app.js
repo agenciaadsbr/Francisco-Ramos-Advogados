@@ -148,7 +148,7 @@
   });
 
   /* ---------- Formulário ---------- */
-  var form = $('#lead-form'), nome = $('#f-nome'), tel = $('#f-tel'), consent = $('#f-consent'), consentL = $('#consent-l'), msg = $('#f-msg'), btn = $('#f-btn'), btnT = $('#f-btn-t');
+  var form = $('#lead-form'), nome = $('#f-nome'), tel = $('#f-tel'), msg = $('#f-msg'), btn = $('#f-btn'), btnT = $('#f-btn-t');
   function mask(v) {
     var d = v.replace(/\D/g, ''); if (d.length > 11 && d.indexOf('55') === 0) d = d.slice(2); d = d.slice(0, 11);
     if (!d) return ''; if (d.length <= 2) return '(' + d; if (d.length <= 6) return '(' + d.slice(0, 2) + ') ' + d.slice(2);
@@ -165,7 +165,6 @@
   tel.addEventListener('input', function () { tel.value = mask(tel.value); });
   tel.addEventListener('blur', function () { var d = tel.value.replace(/\D/g, ''); setErr(tel, 'e-tel', d && !validPhone(d) ? 'Confira o número com DDD.' : ''); });
   nome.addEventListener('input', function () { if (nome.getAttribute('aria-invalid') === 'true') setErr(nome, 'e-nome', ''); });
-  consent.addEventListener('change', function () { if (consent.checked) consentL.classList.remove('bad'); });
 
   var sending = false;
   form.addEventListener('submit', function (ev) {
@@ -174,8 +173,7 @@
     var n = nome.value.trim().replace(/\s+/g, ' '), d = tel.value.replace(/\D/g, ''), ok = true;
     if (n.length < 2 || !/[A-Za-zÀ-ÿ]/.test(n)) { setErr(nome, 'e-nome', 'Informe seu nome.'); ok = false; } else setErr(nome, 'e-nome', '');
     if (!validPhone(d)) { setErr(tel, 'e-tel', 'Informe um WhatsApp válido com DDD.'); ok = false; } else setErr(tel, 'e-tel', '');
-    if (!consent.checked) { consentL.classList.add('bad'); ok = false; } else consentL.classList.remove('bad');
-    if (!ok) { (form.querySelector('[aria-invalid="true"]') || consent).focus(); msg.className = 'msg err-box'; msg.textContent = 'Revise os campos destacados para continuar.'; return; }
+    if (!ok) { (form.querySelector('[aria-invalid="true"]') || nome).focus(); msg.className = 'msg err-box'; msg.textContent = 'Revise os campos destacados para continuar.'; return; }
     sending = true; btn.disabled = true; form.classList.add('loading'); btnT.textContent = 'Enviando...';
     var row = { site: SITE, nome: n.slice(0, 120), whatsapp: d, origem: ORIGEM, servico: SERVICO.slice(0, 120) };
     var attempt = function () { return Promise.race([insert('lp_leads', row), new Promise(function (_, rej) { setTimeout(function () { rej(new Error('timeout')); }, 12000); })]).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); }); };
