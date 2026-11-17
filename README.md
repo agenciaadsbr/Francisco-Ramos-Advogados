@@ -13,6 +13,10 @@ Landing page estática (HTML/CSS/JS, sem build) no padrão ADS BR, para Google A
 ## Leads
 `INSERT` em `lp_leads` (Supabase ADS BR CLIENTES `qxhnjzyhtllmtdrcyygi`, `site = 'francisco-ramos-criminal'`) com `origem` (UTMs/gclid/referrer) e `servico` (área do CTA clicado). Visitas em `lp_visits`. Uma nova tentativa automática se a gravação falhar.
 
+## Painel de leads
+
+`/dashboard` — usuário **Admin**, senha **12345** (Supabase Auth: `admin@francisco-ramos-criminal.adsbr.internal`, acesso em `lp_acessos` site `francisco-ramos-criminal`). Página com noindex.
+
 ## Editar
 Altere `src/*.template.html` e rode `python3 build.py` (insere o logo e o mapa). O mapa vem de `mkmap.py` + `mksvg.py` (malha municipal IBGE via tbrugz/geodata-br).
 

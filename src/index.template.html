@@ -411,6 +411,37 @@ section[id],article[id]{scroll-margin-top:96px}
   .fab span{display:none}.fab{width:58px;padding:0;justify-content:center}
   .map-tag{font-size:12px;padding:8px 10px}
 }
+/* mobile: tudo centralizado */
+@media (max-width:680px){
+  .hero-grid>div:first-child,.def-head,.sit-head,.areas-head,.areas-head>div,.def-head>div,.about-txt,.reg-txt,.faq-head,.conv-txt,.card .body,.form,.fact,.tile{text-align:center;align-items:center}
+  .hero-tag,.kicker{align-self:center}
+  .hero .lead,.lead,.card p,.about-txt p{margin-left:auto;margin-right:auto}
+  .hero-meta,.hero-cta,.pills,.card .foot{justify-content:center}
+  .hero-tag{text-align:left}
+  .sit-item a{grid-template-columns:1fr;justify-items:center;text-align:center;gap:10px;padding:22px 18px}
+  .sit-item .go{display:none}
+  .sit-photo .note{text-align:left}
+  .card .tag{align-self:center}
+  .checks{justify-items:center}
+  .checks li{grid-template-columns:auto;justify-items:center;text-align:center;gap:6px}
+  .quote{text-align:center}.quote::before{left:50%;top:auto;bottom:0;width:48px;height:3px;transform:translateX(-50%)}
+  .caveat{flex-direction:column;align-items:center;text-align:center}
+  .timeline li{text-align:left}
+  .tile .ti{margin-left:auto;margin-right:auto}
+  .vals div,.cities li{text-align:center}
+  .cities,.vals,.team{width:100%}
+  .team{justify-content:center;text-align:center}
+  .qa summary{display:block;position:relative;text-align:center;padding:20px 54px}
+  .qa .pm{position:absolute;right:12px;top:50%;margin-top:-17px;width:34px;height:34px}
+  .qa details[open] .pm{transform:rotate(180deg)}
+  .qa .ans p{text-align:center;padding:0 18px 22px}
+  .steps{width:fit-content;margin-left:auto;margin-right:auto;text-align:left}
+  .map-cap{justify-content:center;text-align:center;flex-wrap:wrap}
+  .ftr-top,.ftr-top ul{text-align:center;justify-items:center}
+  .ftr-logo svg{margin:0 auto}
+  .ftr-bot{justify-content:center;text-align:center}
+  .priv-d{text-align:center}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
