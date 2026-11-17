@@ -1,6 +1,6 @@
 # LP Francisco Ramos Advogados — Direito Criminal
 
-Landing page estática (HTML/CSS/JS, sem build) no padrão ADS BR, para Google Ads. Publicada na Vercel e embutida no WordPress do cliente.
+Landing page estática (HTML/CSS/JS, sem build) no padrão ADS BR, para Google Ads. Vercel: projeto `francisco-ramos-advogados` (deploy automático a cada push na `main`). Embutida no WordPress do cliente via iframe.
 
 | Arquivo | Função |
 |---|---|
